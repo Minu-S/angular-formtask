@@ -1,0 +1,22 @@
+<h2>Login</h2>
+<form #loginForm="ngForm" (ngSubmit) = "onSubmit()">
+ <table>
+    <tr>
+      <td><label>Email</label></td>
+      <td><input type = "text" required #email = "ngModel" [class.is-invalid] = "email.invalid && email.touched" class = "form-control" name = "email" [(ngModel)] = "userModel.email"></td>
+      <td *ngIf="email.errors && (email.invalid && email.touched)">
+        <small>Please enter email id</small>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Password</label></td>
+      <td><input type = "text" required #password = "ngModel" [class.is-invalid] = "password.invalid && password.touched" class = "form-control" name = "password" [(ngModel)] = "userModel.password"></td>
+      <td *ngIf="password.errors && (password.invalid && password.touched)">
+        <small>Please enter password</small>
+      </td>
+    </tr>
+    <tr>
+      <td><button>Login</button></td>
+    </tr>
+  </table>
+</form>

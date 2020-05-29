@@ -1,0 +1,37 @@
+<h2>Register</h2>
+<form #registerForm="ngForm">
+  <table>
+    <tr>
+      <td><label>Name</label></td>
+      <td><input type = "text" required #userName = "ngModel" [class.is-invalid] = "userName.invalid && userName.touched" class = "form-control" name = "userName" 
+      [(ngModel)] = "userModel.userName"></td>
+      <td *ngIf = "userName.errors && (userName.invalid && userName.touched)">
+        <small>Name is mandatory</small>
+      </td>
+    </tr>
+    <tr>
+      <td><label>DOF</label></td>
+      <td><input type = "text" required #dof = "ngModel" [class.is-invalid] = "dof.invalid && dof.touched" class = "form-control" name = "dof" [(ngModel)] = "userModel.dof"></td>
+      <td *ngIf = "dof.errors && (dof.invalid && dof.touched)">
+        <small>date of birth is mandatory</small>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Email</label></td>
+      <td><input type = "text"required #email = "ngModel" [class.is-invalid] = "email.invalid && email.touched" class = "form-control"  name = "email" [(ngModel)] = "userModel.email"></td>
+      <td *ngIf = "email.errors && (email.invalid && email.touched)">
+        <small>Email is mandatory</small>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Role</label></td>
+      <td><input type = "text" required #role = "ngModel" [class.is-invalid] = "role.invalid && role.touched" class = "form-control" name = "role" [(ngModel)] = "userModel.role"></td>
+      <td *ngIf = "role.errors && (role.invalid && role.touched)">
+        <small>Role is mandatory</small>
+      </td>
+    </tr>
+    <tr>
+      <td><button>Submit</button></td>
+    </tr>
+  </table>
+</form>
