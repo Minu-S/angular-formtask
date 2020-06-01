@@ -8,6 +8,9 @@ import { User } from './user';
 })
 export class RegisterFormComponent implements OnInit {
  userModel = new User ('', '', '', '');
+  onSubmit () {
+    console.log(this.userModel);
+  }
   constructor() { }
 
   ngOnInit() {
