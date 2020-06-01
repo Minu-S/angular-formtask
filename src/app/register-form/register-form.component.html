@@ -10,9 +10,9 @@
       </td>
     </tr>
     <tr>
-      <td><label>DOF</label></td>
-      <td><input type = "text" required #dof = "ngModel" [class.is-invalid] = "dof.invalid && dof.touched" class = "form-control" name = "dof" [(ngModel)] = "userModel.dof"></td>
-      <td *ngIf = "dof.errors && (dof.invalid && dof.touched)">
+      <td><label>DOB</label></td>
+      <td><input type = "text" required #dob = "ngModel" [class.is-invalid] = "dob.invalid && dob.touched" class = "form-control" name = "DOB" [(ngModel)] = "userModel.dob"></td>
+      <td *ngIf = "dob.errors && (dob.invalid && dob.touched)">
         <small>date of birth is mandatory</small>
       </td>
     </tr>
