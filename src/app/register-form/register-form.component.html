@@ -1,5 +1,5 @@
 <h2>Register</h2>
-<form #registerForm="ngForm" (ngSubmit) = "registerForm.value"> 
+<form #registerForm="ngForm" (ngSubmit) = "onSubmit(registerForm.value)"> 
   <table>
     <tr>
       <td><label>Name</label></td>
