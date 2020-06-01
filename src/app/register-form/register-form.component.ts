@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
-
+import { AngularFirestore } from '@angular/fire/firestore';
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
@@ -9,7 +9,12 @@ import { User } from './user';
 export class RegisterFormComponent implements OnInit {
  userModel = new User ('', '', '', '');
   onSubmit () {
-    createUser(value)
+      value: string = ""; 
+   constructor(private _appService: appService) { }  
+
+   ngOnInit(): void { 
+      this.value = this._appService.getApp(); 
+   } 
   }
   constructor() { }
 
