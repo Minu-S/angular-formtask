@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
-  imports:      [ BrowserModule,AppRoutingModule, FormsModule ],
+  imports:      [ BrowserModule, AppRoutingModule, FormsModule,AngularFireModule.initializeApp(environment.firebase), AngularFireDatabaseModule],
   declarations: [ AppComponent, HelloComponent, routingComponents, PageNotFoundComponent,],
   bootstrap:    [ AppComponent ]
 })
