@@ -17,9 +17,8 @@ userData: Observable<firebase.User>;
         password: value.password
       });
     }
-  SignUp(email: string, password: string) {
+  SignUp(email, password) {
     this.angularFireAuth
-      .auth
       .createUserWithEmailAndPassword(email, password)
       .then(res => {
         console.log('Successfully signed up!', res);
