@@ -17,11 +17,16 @@ userData: Observable<firebase.User>;
         password: value.password
       });
     }
-SignIn(email: string, password: string) {
-    this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
+  SignUp(email: string, password: string) {
+    this.angularFireAuth
+      .auth
+      .createUserWithEmailAndPassword(email, password)
       .then(res => {
-        console.log('Successfully signed in!');
-      });
-  }     
+        console.log('Successfully signed up!', res);
+      })
+      .catch(error => {
+        console.log('Something is wrong:', error.message);
+      });    
+  }   
   }
   
