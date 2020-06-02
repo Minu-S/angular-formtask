@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
+import { FirebaseService } from '../firebase.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  userModel = new User ('', '');
-  onSubmit () {
-    console.log(this.userModel);
-  }
-  constructor() { }
+  
+  constructor(public firebaseService: FirebaseService,
+   private router: Router
+  ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+  }
+    userModel = new User ('', '');
+
+  onSubmit (userData) {
+  this.firebaseService.createUser(userData);
   }
 }
