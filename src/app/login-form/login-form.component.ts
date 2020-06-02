@@ -18,6 +18,7 @@ export class LoginFormComponent implements OnInit {
     userModel = new User ('', '');
 
     signIn(userData) {
+    this.firebaseService.SignUp(userData.email,userData.password);
     userData.email = ''; 
     userData.password = '';
   }
