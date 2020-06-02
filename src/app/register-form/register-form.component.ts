@@ -18,8 +18,10 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  userModel = new User ('', '', '', '');
-  onSubmit (userData) {
-  this.firebaseService.createUser(userData);
+  userModel = new User ('', '');
+  signUp(userData) {
+    this.firebaseService.SignUp(userData.email, userData.password);
+    userData.email = ''; 
+    userData.password = '';
   }
 }
