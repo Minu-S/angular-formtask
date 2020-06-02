@@ -14,7 +14,7 @@ userData: Observable<firebase.User>;
         name: value.userName,
         dob: value.dob,
         email: value.email,
-        role: value.role
+        password: value.password
       });
     }
 SignIn(email: string, password: string) {

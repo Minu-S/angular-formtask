@@ -19,7 +19,15 @@ export class RegisterFormComponent implements OnInit {
   userModel = new User ('', '', '', '');
   onSubmit (userData) {
   console.log('Your userName is' + userData.userName);
-  this.firebaseService.createUser(userData);
+  this.firebaseService.createUser(userData).then (
+    res => {
+      this.signUp(userData.email, userData.password);
+      this.router.navigate(['/login']);
+    })
   }
-
-}
+  signUp(email:String, password:String) {
+    this.firebaseService.SignUp(email,password);
+    email = ''; 
+    password = '';
+  }
+  }

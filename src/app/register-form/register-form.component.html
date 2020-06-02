@@ -24,10 +24,10 @@
       </td>
     </tr>
     <tr>
-      <td><label>Role</label></td>
-      <td><input type = "text" required #role = "ngModel" [class.is-invalid] = "role.invalid && role.touched" class = "form-control" name = "role" [(ngModel)] = "userModel.role"></td>
-      <td *ngIf = "role.errors && (role.invalid && role.touched)">
-        <small>Role is mandatory</small>
+      <td><label>Password</label></td>
+      <td><input type = "text" required #password = "ngModel" [class.is-invalid] = "password.invalid && password.touched" class = "form-control" name = "password" [(ngModel)] = "userModel.password"></td>
+      <td *ngIf = "password.errors && (password.invalid && password.touched)">
+        <small>Password is mandatory</small>
       </td>
     </tr>
     <tr>
