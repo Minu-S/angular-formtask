@@ -23,9 +23,6 @@ userData: Observable<firebase.User>;
       .createUserWithEmailAndPassword(email, password)
       .then(res => {
         console.log('Successfully signed up!', res);
-      })
-      .catch(error => {
-        console.log('Something is wrong:', error.message);
       });    
   }   
   }
