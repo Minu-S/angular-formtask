@@ -1,5 +1,5 @@
 <h2>Login</h2>
-<form #loginForm="ngForm" (ngSubmit) = "onSubmit()">
+<form #loginForm="ngForm" (ngSubmit) = "signIn(loginForm.value)">
  <table>
     <tr>
       <td><label>Email</label></td>
