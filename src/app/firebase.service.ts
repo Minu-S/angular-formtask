@@ -7,12 +7,12 @@ export class FirebaseService {
 
   constructor(public db:AngularFirestore) { }
     createUser(value) {
-      console.log("creating user..." + value.userName);
+      console.log("creating user...");
       return this .db.collection('users').add({
         name: value.userName,
         dob: value.dob,
-        role: value.role,
-        email: value.email
+        email: value.email,
+        role: value.role
       });
     }
   }
