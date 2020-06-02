@@ -7,18 +7,16 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
- userModel = new User ('', '', '', '');
-  onSubmit () {
-      value: string = ""; 
-   constructor(private _appService: appService) { }  
+  constructor(
+    public firebaseService: FirebaseService,
+    private router: Router
+  ) { }
 
-   ngOnInit(): void { 
-      this.value = this._appService.getApp(); 
-   } 
+  ngOnInit(): void {
   }
-  constructor() { }
-
-  ngOnInit() {
+  userModel = new User ('', '', '', '');
+  onSubmit (userData) {
+  console.log('Your userName is' + userData.userName);
   }
 
 }
