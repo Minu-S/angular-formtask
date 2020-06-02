@@ -11,7 +11,7 @@
     </tr>
     <tr>
       <td><label>DOB</label></td>
-      <td><input type = "text" required #dob = "ngModel" [class.is-invalid] = "dob.invalid && dob.touched" class = "form-control" name = "dob" [(ngModel)] = "userModel.dob"></td>
+      <td><input type = "date" required #dob = "ngModel" [class.is-invalid] = "dob.invalid && dob.touched" class = "form-control" name = "dob" [(ngModel)] = "userModel.dob"></td>
       <td *ngIf = "dob.errors && (dob.invalid && dob.touched)">
         <small>date of birth is mandatory</small>
       </td>

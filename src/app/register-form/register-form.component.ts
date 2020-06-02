@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
+
   constructor(
    public firebaseService: FirebaseService,
    private router: Router
@@ -16,10 +17,9 @@ export class RegisterFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   userModel = new User ('', '', '', '');
   onSubmit (userData) {
-  console.log('Your userName is' + userData.userName);
   this.firebaseService.createUser(userData);
   }
-
 }
