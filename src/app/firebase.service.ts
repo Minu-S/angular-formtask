@@ -16,8 +16,4 @@ export class FirebaseService {
         role: value.role
       });
     }
-    loginUser(value) {
-      console.log("user login...");
-      return this.auth.
-    }
   }
