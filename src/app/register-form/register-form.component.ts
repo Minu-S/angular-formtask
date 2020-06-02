@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FirebaseService } from './app/firebase.service'
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
