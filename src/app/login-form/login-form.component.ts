@@ -23,4 +23,3 @@ export class LoginFormComponent implements OnInit {
     userData.password = '';
   }
   }
-}

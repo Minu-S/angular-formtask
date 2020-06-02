@@ -27,6 +27,7 @@ userData: Observable<firebase.User>;
       .catch(error => {
         console.log('Something is wrong:', error.message);
       });    
+
       
   }
   }
