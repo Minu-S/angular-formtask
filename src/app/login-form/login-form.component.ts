@@ -17,8 +17,7 @@ export class LoginFormComponent implements OnInit {
   }
     userModel = new User ('', '');
 
-  onSubmit (userData) {
-    userData.email = ''; 
-    userData.password = '';
+  onSubmit () {
+    
   }
   }
