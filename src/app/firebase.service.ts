@@ -22,6 +22,9 @@ userData: Observable<firebase.User>;
       .createUserWithEmailAndPassword(email, password)
       .then(res => {
         console.log('Successfully signed up!', res);
+      })
+      .catch(error => {
+        console.log('Something is wrong:', error.message);
       });    
   } 
    SignIn(email, password) {
@@ -29,6 +32,9 @@ userData: Observable<firebase.User>;
       .signInWithEmailAndPassword(email, password)
       .then(res => {
         console.log('Successfully signed in!');
+      })
+      .catch(err => {
+        console.log('Something is wrong:',err.message);
       });
   }  
   }
