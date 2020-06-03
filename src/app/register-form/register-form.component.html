@@ -26,9 +26,10 @@
     </tr>
     <tr>
       <td><label>Password</label></td>
-      <td><input type = "text" password = "^\d{8}"required #password = "ngModel" [class.is-invalid] = "password.invalid && password.touched" class = "form-control" name = "password" [(ngModel)] = "userModel.password"></td>
+      <td><input type = "text" password = "^\d{8}" required #password = "ngModel" [class.is-invalid] = "password.invalid && password.touched" class = "form-control" name = "password" [(ngModel)] = "userModel.password"></td>
       <td *ngIf = "password.errors && (password.invalid && password.touched)">
-        <small class = "text-danger">Password is mandatory</small>
+        <small class = "text-danger" ngIf = "password.errors.required">Password is mandatory</small>
+        <small class = "text-danger" ngIf = "password.errors.pattern">Password must atleast have 8 characters</small>
       </td>
     </tr>
     <tr>
