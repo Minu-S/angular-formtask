@@ -3,7 +3,7 @@
  <table>
     <tr>
      <td><label>Email</label></td>
-      <td><input type = "text" pattern = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/' required #email = "ngModel" [class.is-invalid] = "email.invalid && email.touched" class = "form-control"  name = "email" [(ngModel)] = "userModel.email"></td>
+      <td><input type = "text" pattern = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required #email = "ngModel" [class.is-invalid] = "email.invalid && email.touched" class = "form-control"  name = "email" [(ngModel)] = "userModel.email"></td>
       <td *ngIf = "email.errors && (email.invalid || email.touched)">
         <small class = "text-danger" *ngIf = "email.errors.required">Email is mandatory</small>
         <small class = "text-danger" *ngIf = "email.errors.pattern">Please enter valid email address</small>
