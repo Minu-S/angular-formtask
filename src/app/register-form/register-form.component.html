@@ -6,28 +6,28 @@
       <td><input type = "text" required #userName = "ngModel" [class.is-invalid] = "userName.invalid && userName.touched" class = "form-control" name = "userName" 
       [(ngModel)] = "userModel.userName"></td>
       <td *ngIf = "userName.errors && (userName.invalid && userName.touched)">
-        <small>Name is mandatory</small>
+        <small class = "text-danger">Name is mandatory</small>
       </td>
     </tr>
     <tr>
       <td><label>DOB</label></td>
       <td><input type = "date" required #dob = "ngModel" [class.is-invalid] = "dob.invalid && dob.touched" class = "form-control" name = "dob" [(ngModel)] = "userModel.dob"></td>
       <td *ngIf = "dob.errors && (dob.invalid && dob.touched)">
-        <small>date of birth is mandatory</small>
+        <small class = "text-danger">date of birth is mandatory</small>
       </td>
     </tr>
     <tr>
       <td><label>Email</label></td>
       <td><input type = "text"required #email = "ngModel" [class.is-invalid] = "email.invalid && email.touched" class = "form-control"  name = "email" [(ngModel)] = "userModel.email"></td>
       <td *ngIf = "email.errors && (email.invalid && email.touched)">
-        <small>Email is mandatory</small>
+        <small class = "text-danger">Email is mandatory</small>
       </td>
     </tr>
     <tr>
       <td><label>Password</label></td>
       <td><input type = "text" required #password = "ngModel" [class.is-invalid] = "password.invalid && password.touched" class = "form-control" name = "password" [(ngModel)] = "userModel.password"></td>
       <td *ngIf = "password.errors && (password.invalid && password.touched)">
-        <small>Password is mandatory</small>
+        <small class = "text-danger">Password is mandatory</small>
       </td>
     </tr>
     <tr>
