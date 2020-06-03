@@ -4,7 +4,7 @@
     <tr>
      <td><label>Email</label></td>
       <td><input type = "text" pattern = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/' required #email = "ngModel" [class.is-invalid] = "email.invalid && email.touched" class = "form-control"  name = "email" [(ngModel)] = "userModel.email"></td>
-      <td *ngIf = "email.errors && (email.invalid && email.touched)">
+      <td *ngIf = "email.errors && (email.invalid || email.touched)">
         <small class = "text-danger" *ngIf = "email.errors.required">Email is mandatory</small>
         <small class = "text-danger" *ngIf = "email.errors.pattern">Please enter valid email address</small>
       </td>
@@ -12,7 +12,7 @@
     <tr>
       <td><label>Password</label></td>
       <td><input type = "text" pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$" required #password = "ngModel" [class.is-invalid] = "password.invalid && password.touched" class = "form-control" name = "password" [(ngModel)] = "userModel.password"></td>
-      <td *ngIf = "password.errors && (password.invalid && password.touched)">
+      <td *ngIf = "password.errors && (password.invalid || password.touched)">
         <small class = "text-danger" *ngIf = "password.errors.required">Password is mandatory</small>
         <small class = "text-danger" *ngIf = "password.errors.pattern">Password must have atleast 1 uppercase 1 lowercase 1 special character and a number</small>
       </td>
